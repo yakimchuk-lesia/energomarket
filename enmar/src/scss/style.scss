@@ -1,0 +1,190 @@
+@import "reset.scss";
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro-Regular';
+    src: url('../fonts/MyriadPro-Regular.eot'),
+        url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MyriadPro-Regular.woff') format('woff'),
+        url('../fonts/MyriadPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-BoldItalic';
+    src: url('../fonts/Lato-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Lato-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('../fonts/Lato-Bold.woff2') format('woff2'),
+        url('../fonts/Lato-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../fonts/Lato-Regular.woff2') format('woff2'),
+        url('../fonts/Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$colorPurple: #8d81ac;
+$colorWhite: #fff;
+$colorGrey: #848e97;
+$colorViolet: #635c73;
+$colorDark: #323232;
+
+@mixin font($size, $family, $color) {
+    font-size: $size;
+    font-family: $family, 'Montserrat-Regular', sans-serif;
+    color: $color;
+}
+
+body {
+    font-family: 'Montserrat-Regular', sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 10px;
+    margin: 0 auto;
+
+}
+
+.header__flex {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/1100px.jpg);
+    padding: 240px 0px 0px;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+}
+
+.header__title {
+    margin: 45px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__title,
+.main__name,
+.header__email,
+.header__logo{
+    margin: 20px auto;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 75px;
+    color: ghostwhite;
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+.header__viber{
+    width: 350px;
+    height: 56px;
+    background-color: $colorPurple;
+     position: relative;
+     text-align: center;
+     padding: 25px 12px 0px 45px;
+     margin: 0 auto;
+    border: solid $colorPurple;
+    border-radius: 3%;
+    
+     &::before{
+        content: url(../img/iconfinder_Viber_2460217.png);
+        position: absolute;
+         left: 20px;
+     top: 6px;
+    }
+    &:hover{
+        background-color:$colorViolet;
+         transition: 0.28s; 
+        border: solid $colorWhite;
+         border-radius: 3%;
+    }
+}
+a{
+    color: $colorWhite;
+    text-decoration: none;  
+    font-size: 23px;
+}
+
+.header__buttons{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.schedule,
+.phones-call,
+.address{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center; 
+    align-items: center; 
+    padding-left: 16px;
+}
+
+.schedule-text,
+.addres-text{
+    color: $colorWhite;
+    font-size: 25px;
+    text-align: center;
+}
+
+.phones-call::before{
+    content: url(../img/iconfinder_whatsapp_messenger_logo_app_application_call_chat_2701071.png);
+}
+.schedule::before{
+ content:url(../img/iconfinder_Asset_11_2342732.png);
+}
+
+.address::before{
+    content: url(../img/iconfinder_Asset_5_2342175-2.png);
+}
+
+.phones-call::before,
+.schedule::before,
+.address::before {
+    position: absolute;
+    top: 12px;
+    left: -45px;
+}
+
+.inner-block{
+    
+}
+
+
+    
+
+
+
+
+
+
